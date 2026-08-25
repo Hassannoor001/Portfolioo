@@ -425,9 +425,11 @@ function Hero() {
               Contact Me
             </a>
             <a
-              href="#"
+              href="/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-3 rounded border border-white/10 text-white/70 text-sm font-medium hover:border-white/20 hover:text-white transition-colors"
-              aria-label="Download CV (placeholder)">
+              aria-label="Download CV">
               Download CV
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M7 2v8M3.5 7l3.5 3.5L10.5 7M2.5 12h9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -824,7 +826,7 @@ function MindBridgeProject() {
           </div>
         </FadeIn>
 
-        {/* Visual showcase — placeholder panels */}
+        {/* Visual showcase — interface screenshots */}
         <FadeIn>
           <div className="mb-12">
             <h3 className="text-xs font-mono text-white/40 uppercase tracking-widest mb-5">
@@ -832,23 +834,22 @@ function MindBridgeProject() {
             </h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                'Sessions Management View',
-                'Student Records Panel',
-                'School Partnerships Overview',
-                'Analytics & Reports',
-              ].map((view) => (
+                { label: 'Sessions Management View', src: '/screenshots/sessions_management.jpg' },
+                { label: 'Student Records Panel', src: '/screenshots/student_records.jpg' },
+                { label: 'School Partnerships Overview', src: '/screenshots/school_partnerships.jpg' },
+                { label: 'Analytics & Reports', src: '/screenshots/analytics_reports.jpg' },
+              ].map((item) => (
                 <div
-                  key={view}
-                  className="aspect-video rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-center text-center p-8"
-                  role="img"
-                  aria-label={`${view} — screenshot placeholder`}
+                  key={item.label}
+                  className="group relative aspect-video rounded-xl bg-white/[0.02] border border-white/5 overflow-hidden flex items-center justify-center"
                 >
-                  <div>
-                    <p className="font-mono text-xs text-white/20 tracking-widest uppercase mb-2">
-                      Screenshot Placeholder
-                    </p>
-                    <p className="text-sm text-white/40">{view}</p>
-                    <p className="text-xs text-white/20 mt-1">Replace with actual screenshot</p>
+                  <img
+                    src={item.src}
+                    alt={item.label}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0f]/90 via-[#0c0c0f]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white/90 text-sm font-medium">{item.label}</p>
                   </div>
                 </div>
               ))}
@@ -1181,6 +1182,8 @@ function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    const text = encodeURIComponent(`Hi Hassan, this is ${form.name}.\n\nSubject: ${form.subject || 'Inquiry'}\n\n${form.message}`);
+    window.open(`https://wa.me/254743723375?text=${text}`, '_blank', 'noopener,noreferrer');
     setSubmitted(true)
   }
 
@@ -1210,21 +1213,24 @@ function Contact() {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs text-white/30 w-16">Phone</span>
-                <span className="text-white/50 text-sm">
-                  [0743723375]
-                </span>
+                <a href="https://wa.me/254743723375" target="_blank" rel="noopener noreferrer" className="text-[#4e7eff] hover:underline text-sm flex items-center gap-1.5">
+                  +254 743723375 (WhatsApp)
+                  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true" className="opacity-70">
+                    <path d="M2.5 7h9M7.5 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs text-white/30 w-16">Email</span>
-                <span className="text-white/50 text-sm">
-                  [hn8505341@gmail.com]
-                </span>
+                <a href="mailto:hn8505341@gmail.com" className="text-white/60 hover:text-white transition-colors text-sm">
+                  hn8505341@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs text-white/30 w-16">GitHub</span>
-                <span className="text-white/50 text-sm">
-                  [github.com/Hassannoor001]
-                </span>
+                <a href="https://github.com/Hassannoor001" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors text-sm">
+                  github.com/Hassannoor001
+                </a>
               </div>
             </div>
           </FadeIn>
@@ -1306,9 +1312,12 @@ function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 rounded bg-[#4e7eff] text-white text-sm font-medium hover:bg-[#6690ff] transition-colors focus-visible:ring-2 focus-visible:ring-[#4e7eff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c0c0f]"
+                    className="w-full px-6 py-3 rounded bg-[#4e7eff] text-white text-sm font-medium hover:bg-[#6690ff] transition-colors focus-visible:ring-2 focus-visible:ring-[#4e7eff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c0c0f] flex items-center justify-center gap-2"
                   >
-                    Send Message
+                    Send via WhatsApp
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                      <path d="M2.5 7h9M7.5 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </button>
                 </div>
               </form>
