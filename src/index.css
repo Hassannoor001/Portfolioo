@@ -25,9 +25,9 @@
 }
 
 :root {
-  --background: #0c0c0f;
+  --background: #0a0a0c;
   --foreground: #e4e4eb;
-  --card: #131318;
+  --card: rgba(19, 19, 24, 0.4);
   --card-foreground: #e4e4eb;
   --primary: #4e7eff;
   --primary-foreground: #ffffff;
@@ -37,9 +37,20 @@
   --muted-foreground: #7878a0;
   --accent: #4e7eff;
   --accent-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.05);
   --ring: #4e7eff;
-  --radius: 6px;
+  --radius: 12px;
+}
+
+@utility glass-card {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3);
+}
+
+@utility glow-accent {
+  box-shadow: 0 0 40px -10px rgba(78, 126, 255, 0.15);
 }
 
 * {
