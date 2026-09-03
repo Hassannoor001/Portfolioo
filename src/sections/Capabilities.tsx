@@ -3,7 +3,7 @@ import { FadeIn } from '../components/ui/FadeIn';
 
 export function Capabilities() {
   return (
-    <section className="py-28 border-t border-white/5" aria-labelledby="capabilities-heading">
+    <section className="py-28" aria-labelledby="capabilities-heading">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
           <p className="font-mono text-xs text-[#4e7eff] tracking-widest uppercase mb-4">
@@ -17,11 +17,11 @@ export function Capabilities() {
           </h2>
         </FadeIn>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 rounded-xl overflow-hidden">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {CAPABILITIES.map((cap, i) => (
             <FadeIn key={cap.title} delay={i * 50}>
-              <div className="bg-[#0c0c0f] p-6 h-full group hover:bg-[#131318] transition-colors duration-200">
-                <span className="text-2xl text-[#4e7eff]/60 block mb-4" aria-hidden="true">
+              <div className="glass-card rounded-2xl p-6 h-full group hover:border-[#4e7eff]/30 hover:bg-white/[0.06] transition-all duration-300 glow-accent-hover">
+                <span className="text-2xl text-[#4e7eff]/60 block mb-4 group-hover:text-[#4e7eff]/90 transition-colors" aria-hidden="true">
                   {cap.icon}
                 </span>
                 <h3 className="text-white text-sm font-medium mb-3 leading-snug">

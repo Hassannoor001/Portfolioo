@@ -6,7 +6,7 @@ export function MindBridgeProject() {
   return (
     <section
       id="mindbridge"
-      className="py-28 border-t border-white/5"
+      className="py-28"
       aria-labelledby="mindbridge-heading"
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -220,7 +220,7 @@ export function MindBridgeProject() {
             </div>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#4e7eff] text-white text-sm font-medium hover:bg-[#6690ff] shadow-[0_0_20px_rgba(78,126,255,0.4)] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-[#4e7eff]/50 bg-[#4e7eff]/10 text-white text-sm font-medium hover:bg-[#4e7eff]/25 hover:border-[#4e7eff]/80 shadow-[0_0_30px_rgba(78,126,255,0.15)] hover:shadow-[0_0_40px_rgba(78,126,255,0.3)] transition-all duration-200"
             >
               Discuss This Project
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">

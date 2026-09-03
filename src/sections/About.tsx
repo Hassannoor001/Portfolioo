@@ -4,7 +4,7 @@ import { Tag } from '../components/ui/Tag';
 export function About() {
   const { ref, inView } = useInView()
   return (
-    <section id="about" className="py-28 border-t border-white/5" aria-labelledby="about-heading">
+    <section id="about" className="py-28" aria-labelledby="about-heading">
       <div className="max-w-6xl mx-auto px-6">
         <div
           ref={ref}

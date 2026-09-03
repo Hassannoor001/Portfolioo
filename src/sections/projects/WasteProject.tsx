@@ -3,7 +3,7 @@ import { Tag } from '../../components/ui/Tag';
 
 export function WasteProject() {
   return (
-    <section className="py-20 border-t border-white/5" aria-labelledby="waste-heading">
+    <section className="py-20" aria-labelledby="waste-heading">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
           <div className="grid lg:grid-cols-5 gap-10 items-start">
@@ -64,7 +64,7 @@ export function WasteProject() {
                   ))}
                 </div>
               </div>
-              <div className="mt-4 p-4 rounded-lg border border-white/5 bg-white/[0.02]">
+              <div className="mt-4 glass-card p-4 rounded-xl">
                 <p className="text-xs font-mono text-white/30 uppercase tracking-widest mb-2">
                   Why it matters
                 </p>

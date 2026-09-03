@@ -2,21 +2,7 @@ import { FadeIn } from '../components/ui/FadeIn';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-24" aria-label="Introduction">
-      {/* Background ambient lighting */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
-            backgroundSize: '80px 80px',
-          }}
-        />
-        <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-[#4e7eff]/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[150px]" />
-      </div>
+    <section className="min-h-screen flex items-center pt-24" aria-label="Introduction">
 
       <div className="relative max-w-6xl mx-auto px-6 py-12 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

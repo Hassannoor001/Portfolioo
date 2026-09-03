@@ -5,7 +5,7 @@ export function Journey() {
   return (
     <section
       id="journey"
-      className="py-28 border-t border-white/5"
+      className="py-28"
       aria-labelledby="journey-heading"
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -43,7 +43,7 @@ export function Journey() {
                       </span>
                     </div>
                     <div className="relative ml-0 sm:ml-4 mt-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full border-2 border-[#4e7eff] bg-[#0c0c0f]" />
+                      <div className="w-2.5 h-2.5 rounded-full border-2 border-[#4e7eff] bg-[#0a0a0c] shadow-[0_0_8px_rgba(78,126,255,0.6)]" />
                     </div>
                   </div>
                   {/* Content */}

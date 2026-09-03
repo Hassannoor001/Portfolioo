@@ -2,7 +2,7 @@ export function Footer() {
   const year = new Date().getFullYear()
   return (
     <footer
-      className="border-t border-white/5 py-12"
+      className="py-12 border-t border-white/5"
       role="contentinfo"
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -13,7 +13,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col items-start sm:items-end gap-2">
             <p className="text-white/30 text-sm">
-              [your.email@placeholder.com]
+              hn8505341@gmail.com
             </p>
             <p className="text-white/20 text-xs font-mono">
               © {year} Hassan Noor Shaban. All rights reserved.

@@ -5,7 +5,7 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="py-28 border-t border-white/5"
+      className="py-28"
       aria-labelledby="skills-heading"
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -21,11 +21,11 @@ export function Skills() {
           </h2>
         </FadeIn>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 rounded-lg overflow-hidden">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {Object.entries(SKILLS).map(([group, items], i) => (
             <FadeIn key={group} delay={i * 60}>
-              <div className="bg-[#0c0c0f] p-6 h-full">
-                <h3 className="font-mono text-xs text-white/40 tracking-widest uppercase mb-4">
+              <div className="glass-card rounded-2xl p-6 h-full hover:border-white/20 hover:bg-white/[0.06] transition-all duration-300 group">
+                <h3 className="font-mono text-xs text-[#4e7eff]/70 tracking-widest uppercase mb-4 group-hover:text-[#4e7eff] transition-colors">
                   {group}
                 </h3>
                 <ul className="space-y-2" role="list">

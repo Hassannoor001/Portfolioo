@@ -3,7 +3,7 @@ import { Tag } from '../../components/ui/Tag';
 
 export function MeysunProject() {
   return (
-    <section className="py-20 border-t border-white/5" aria-labelledby="meysun-heading">
+    <section className="py-20" aria-labelledby="meysun-heading">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
           <div className="grid lg:grid-cols-5 gap-10 items-start">
@@ -51,14 +51,14 @@ export function MeysunProject() {
                 ].map((mod) => (
                   <div
                     key={mod}
-                    className="flex items-center gap-2 px-3 py-2 rounded border border-white/5 bg-white/[0.02]"
+                    className="glass-card flex items-center gap-2 px-3 py-2 rounded-xl hover:border-white/15 transition-all duration-200"
                   >
                     <span className="w-1 h-1 rounded-full bg-orange-400/60 flex-shrink-0" aria-hidden="true" />
                     <span className="text-sm text-white/55">{mod}</span>
                   </div>
                 ))}
               </div>
-              <div className="mt-4 p-4 rounded-lg border border-orange-500/10 bg-orange-500/[0.03]">
+              <div className="mt-4 glass-card p-4 rounded-xl border-orange-500/15">
                 <p className="text-xs font-mono text-orange-400/70 uppercase tracking-widest mb-1">
                   Status
                 </p>
